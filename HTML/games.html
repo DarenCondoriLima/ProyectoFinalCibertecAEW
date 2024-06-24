@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/games.css">
+</head>
+<body>
+    <header>          
+        <a href="../HTML/home.html">
+            <img src="../images/logo.png" id="logo">
+        </a>
+        <nav id="menu">
+            <ul>
+                <li><a href="../HTML/home.html">Inicio</a></li>
+                <li><a href="../HTML/games.html">Juegos</a></li>
+                <li><a href="../HTML/acercaDe.html">Acerca de</a></li>
+                <li><a href="../HTML/support.html">Soporte</a></li>
+                <li><a href="../HTML/login.html">Iniciar sesión</a>
+                <ul id="subMenu">
+                    <li>
+                        <a href="..//HTML/register.html">Registraté</a>
+                    </li>
+                </ul></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contentSearch">
+            <div id="contentElementsSearch">
+                <input type="text" id="search" placeholder="Busque un juego...">
+                <svg viewBox="0 0 50 50"><path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"/></svg>
+            </div>
+        </section>
+        <section id="contentPrincipal">
+            <section id="contentFilter">
+                <div id="contentPrice">
+                    <span id="titleFilter">Precio</span>
+                    <div id="contentElementPrices">
+                        <div class="elementFilterPrice">
+                            <span>Precio mínimo</span>
+                            <span>Precio máximo</span>
+                        </div>
+                        <div class="elementFilterPrice">
+                            <input type="text">
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+                <div id="generos">
+                    <span id="titleFilter">Géneros</span>
+                    <a href="#" class="itemGeneros">Acción</a>
+                    <a href="#" class="itemGeneros">Aventura</a>
+                    <a href="#" class="itemGeneros">Carreras</a>
+                    <a href="#" class="itemGeneros">Cartas</a>
+                    <a href="#" class="itemGeneros">Casual</a>
+                    <a href="#" class="itemGeneros">Comedia</a>
+                    <a href="#" class="itemGeneros">Construcción</a>
+                    <a href="#" class="itemGeneros">Deportes</a>
+                    <a href="#" class="itemGeneros">Estrategia</a>
+                    <a href="#" class="itemGeneros">Exploración</a>
+                    <a href="#" class="itemGeneros">RPG</a>
+                    <a href="#" class="itemGeneros">Supervivencia</a>
+                    <a href="#" class="itemGeneros">Terror</a>
+                </div>     
+            </section>
+            <section id="contentGames">
+                <span id="contentGamesTitle">Juegos Populares</span>
+                <div class="card">
+                    <img src="../images/logo.png" alt="">
+                    <p>Nombre del Juego</p>
+                    <span>$19.99</span>
+                </div>
+                <div class="card">
+                    <img src="../images/logo.png" alt="">
+                    <p>Nombre del Juego</p>
+                    <span>$19.99</span>
+                </div>
+                <div class="card">
+                    <img src="../images/logo.png" alt="">
+                    <p>Nombre del Juego</p>
+                    <span>$19.99</span>
+                </div>
+                <div class="card">
+                    <img src="../images/logo.png" alt="">
+                    <p>Nombre del Juego</p>
+                    <span>$19.99</span>
+                </div>
+                <div class="card">
+                    <img src="../images/logo.png" alt="">
+                    <p>Nombre del Juego</p>
+                    <span>$19.99</span>
+                </div>
+                <div id="numberPage">
+                    <a href="#">
+                        <svg id="arrow-left" viewBox="0 0 50 50">
+                            <circle cx="25" cy="25" r="25"/>
+                            <path d="M26.5,25.31,16,33.36a5,5,0,0,0-1.45,5.09c.9,2.22,4.47,3.54,7.73,1.71L39.14,28.28c.18-.13,2-1.46,1.86-3.29v.38c.15-1.83-1.68-3.16-1.86-3.29L22.29,10.2c-3.26-1.83-6.83-.51-7.73,1.71A5,5,0,0,0,16,17L26.5,25.05Z" style="fill: #fff"/>
+                        </svg>
+                    </a>
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                    <a href="#">
+                        <svg id="arrow-right" viewBox="0 0 50 50">
+                            <circle cx="25" cy="25" r="25"/>
+                            <path d="M26.5,25.31,16,33.36a5,5,0,0,0-1.45,5.09c.9,2.22,4.47,3.54,7.73,1.71L39.14,28.28c.18-.13,2-1.46,1.86-3.29v.38c.15-1.83-1.68-3.16-1.86-3.29L22.29,10.2c-3.26-1.83-6.83-.51-7.73,1.71A5,5,0,0,0,16,17L26.5,25.05Z" style="fill: #fff"/>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div id="redesFooter">  
+            <a href="#">
+                <svg viewBox="0 0 50 50"><path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"/></svg>
+            </a>
+            <a href="#">
+                <svg viewBox="0 0 50 50"><path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"/></svg>
+            </a>
+            <a href="#">
+                <svg viewBox="0 0 50 50"><path d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"/></svg>
+            </a>
+        </div>
+        <div id="textFooter">
+            <p>&#169;2024 BetterPriceGames | Todos los derechos reservados</p>
+            <p>Web realizada por Daren Paulo Jose Condori Lima y</p>
+            <p>Sebastián Martín Talavera Fernandez</p>
+        </div>
+    </footer>
+</body>
+</html>

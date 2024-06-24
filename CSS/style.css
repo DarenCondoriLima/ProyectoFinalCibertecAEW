@@ -1,3 +1,11 @@
+:root{
+    --color-letter: #0D1F23;
+    --color-letter-hover: #6db2c4;
+    --color-primary: #2D4A53;
+    --color-secondary: #69818D;
+    --color-extra: #AFB3B7;
+    --color-background: #5A636A;
+}
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +21,7 @@ body{
 header{
     width: 100%;
     height: 10vh;
-    background-color: aqua;
+    background-color: var(--color-secondary);
     display: flex;
     align-items: center;
     position: sticky;
@@ -36,12 +44,12 @@ header{
 }
 #menu li a{
     text-decoration: none;
-    color: black;
+    color: var(--color-letter);
     font-size: 1.2rem;
-    padding-left: 15px;
+    margin-left: 15px;
 }
 #menu li a:hover{
-    color: white;
+    color: var(--color-letter-hover);
     transition: color .3s;
 }
 #subMenu{
@@ -50,7 +58,7 @@ header{
     opacity: 0;
     transition: opacity .5S;
     top: 100%; /* Para que aparezca debajo del elemento padre */
-    background-color: aquamarine;
+    background-color: var(--color-extra);
     margin-left: 15px;
 }
 #subMenu li a{
@@ -61,13 +69,19 @@ header{
     visibility: visible;
     opacity: 1;
 }
+/*Main*/
+main{
+    width: 100%;
+    overflow-x: hidden;
+}
 /*Footer*/
 footer{
-    width: 99vw;
+    width: 100%;
     height: 10vh;
-    background-color: blueviolet;
+    background-color: var(--color-secondary);
     display: flex;
     justify-content: space-between;
+    color: var(--color-letter);
 }
 #redesFooter{
     width: 15%;

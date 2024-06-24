@@ -1,0 +1,140 @@
+/*Header*/
+#menu li:nth-child(2) a{
+    color: var(--color-letter-hover);
+    font-weight: bolder;
+    border-bottom: 2px var(--color-letter-hover) dashed;
+}
+
+/*Search*/
+#contentSearch{
+    width: 100%;
+    height: 15vh;
+    background-color: var(--color-background);
+    color: var(--color-letter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contentElementsSearch{
+    position: relative;
+    width: 30%;
+    height: 40%;
+}
+#contentElementsSearch input{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    padding-left: 40px;
+    border-radius: 15px;
+}
+#contentElementsSearch svg{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 30px;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none; /*Esto evita que la imagen interfiera con el funcionamiento del input*/
+}
+
+/*Principal*/
+#contentPrincipal{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-letter);
+    display: flex;
+}
+/*-Filter*/
+#contentFilter{
+    width: 20%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px black solid;
+}
+#titleFilter{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+#contentPrice{
+    width: 80%;
+}
+#contentElementPrices{
+    padding-left: 30px;
+    display: flex;
+}
+.elementFilterPrice{
+    display: flex;
+    flex-direction: column;
+}
+.elementFilterPrice span:nth-child(1), .elementFilterPrice input:nth-child(1){
+    margin-bottom: 5px;
+}
+.elementFilterPrice input{
+    margin-left: 15px;
+    width: 45px;
+}
+#generos{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.itemGeneros{
+    padding-left: 30px;
+    text-decoration: none;
+    color: var(--color-letter);
+}
+.itemGeneros:hover{
+    text-decoration: underline;
+}
+/*-Games*/
+#contentGames{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contentGamesTitle{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.card{
+    width: 90%;
+    height: 15%;
+    border: 3px black solid;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.card img{
+    height: 100%;
+}
+
+#numberPage{
+    display: flex;
+    margin-top: 15px;
+}
+#numberPage ul{
+    list-style: none;
+    display: flex;
+}
+#numberPage ul a{
+    text-decoration: none;
+    color: var(--color-letter);
+    margin-left: 5px;
+}
+#numberPage ul a:hover{
+    text-decoration: underline;
+}
+#numberPage svg{
+    width: 20px;
+}
+#arrow-right{
+    margin-left: 5px;  
+}
+#arrow-left{
+    transform: rotate(180deg);
+}
