@@ -1,0 +1,146 @@
+/*Header*/
+#menu li:nth-child(3) a{
+    color: var(--color-letter-hover);
+    font-weight: bolder;
+    border-bottom: 2px var(--color-letter-hover) dashed;
+}
+
+/*Main*/
+main{
+    background-color: var(--color-background);
+}
+main h2{
+    font-size: 1.7rem;
+}
+
+/*Quienes Somos*/
+#contentQuienesSomos{
+    width: 100%;
+    height: 30vh;
+}
+#contentQuienesSomosAling{
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+}
+#contentQuienesSomosAling div{
+    width: 55%;
+    height: 100%;
+}
+#contentQuienesSomos h2{
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+#contentQuienesSomos p{
+    font-size: 1.3rem;
+}
+
+/*Que ofrecemos*/
+#contentQueOfrecemos{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+#contentQueOfrecemosTitle{
+    width: 90%;
+    margin-bottom: 10px;
+}
+#cards{
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+}
+.card{
+    width: 100%;
+    height: 18%;
+    background-color: var(--color-primary);
+    border: 3px black solid;
+    border-radius: 30px;
+    margin-top: 10px;
+    display: flex;
+}
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+.card:nth-child(odd){
+    justify-content: flex-start;
+}
+.card:nth-child(even){
+    justify-content: flex-end;
+}
+.contentCard{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.contentCard img:nth-child(odd){/*Odd selecciona los impares*/
+    height: 90%;
+}
+.contentCard img:nth-child(even){/*Even selecciona los pares*/
+    height: 90%;
+}
+.contentCard div{
+    width: 100%;
+}
+.contentCard div:nth-child(odd){
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.contentCard div:nth-child(even){
+    margin-left: 30px;
+}
+.contentCard img:nth-child(odd){
+    margin-left: 20px;
+}
+.contentCard img:nth-child(even){
+    margin-right: 20px;
+}
+.contentCard span{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.contentCard p{
+    font-size: 1.2rem;
+}
+.contentCard div:nth-child(odd) p,span{
+    text-align: right;
+}
+.contentCard div:nth-child(even) p,span{
+    text-align: left;
+}
+
+
+/*Porque escogernos*/
+#contentPorqueEscogernos{
+    width: 100%;
+    height: 55vh;
+}
+#contentPorqueEscogernosText{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+#contentPorqueEscogernosText h2{
+    padding: 10px 0;
+}
+#contentPorqueEscogernosText ul{
+    padding-left: 35px;
+    width: 60%;
+}
+#contentPorqueEscogernosText li{
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+/*Como funciona*/
+#contentComoFunciona{
+    width: 100%;
+    height: 40%;
+}

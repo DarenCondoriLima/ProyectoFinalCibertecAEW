@@ -27,8 +27,9 @@ header{
     position: sticky;
 }
 #logo{
-    width: 10%;
+    width: 12%;
     height: 100%;
+    margin-left: 10px;
 }
 #menu{
     width: 60%;
@@ -52,20 +53,29 @@ header{
     color: var(--color-letter-hover);
     transition: color .3s;
 }
+/* #menu li:nth-last-child(1) a:hover{
+    padding-left: -15px;
+    color: var(--color-letter);
+    background-color: var(--color-extra);
+    transition: all .2s;
+} */
+ #menu li:nth-child(5):hover{
+    transform: translateY(-10px);
+    transition: all .2s;
+}
 #subMenu{
     position: absolute;
     visibility: hidden;
     opacity: 0;
-    transition: opacity .5S;
-    top: 100%; /* Para que aparezca debajo del elemento padre */
-    background-color: var(--color-extra);
+    transition: all .5S;
+    top: 0;
     margin-left: 15px;
 }
 #subMenu li a{
-    padding-left: 0;
-    padding-right: 30px;
+    margin-left: 0px;
 }
 #menu li:hover #subMenu {
+    top: 100%;
     visibility: visible;
     opacity: 1;
 }

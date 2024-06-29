@@ -1,0 +1,6 @@
+/*Header*/
+#subMenu li a{
+    color: var(--color-letter-hover);
+    font-weight: bolder;
+    border-bottom: 2px var(--color-letter-hover) dashed;
+}
