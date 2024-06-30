@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/acercaDe.css">
 </head>
 <body>
     <header>          
-        <a href="../HTML/home.html">
-            <img src="../images/logo.png" id="logo">
+        <a id="logo" href="../HTML/home.html">
+            <img src="../images/logo.png">
         </a>
         <nav id="menu">
             <ul>
@@ -18,16 +19,24 @@
                 <li><a href="../HTML/games.html">Juegos</a></li>
                 <li><a href="../HTML/acercaDe.html">Acerca de</a></li>
                 <li><a href="../HTML/support.html">Soporte</a></li>
-                <li><a href="../HTML/login.html">Iniciar sesión</a>
+                <li id="menuLogin"><a href="../HTML/login.html">Iniciar sesión</a>
                 <ul id="subMenu">
                     <li>
                         <a href="..//HTML/register.html">Registraté</a>
                     </li>
                 </ul></li>
+                <li id="menuUser"><a href="../HTML/user.html"><img src="../images/user.png"></a>
+                    <ul>
+                        <li><a href="../HTML/user.html">Mi perfil</a></li>
+                        <li><a href="../HTML/wishList.html">Lista de deseos</a></li>
+                        <li onclick="singOut()">Cerrar sesión</li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
+        <section class="header"></section>
         <section id="contentQuienesSomos">
             <div id="contentQuienesSomosAling">
                 <div>
@@ -122,5 +131,6 @@
             <p>Sebastián Martín Talavera Fernandez</p>
         </div>
     </footer>
+    <script src="../JS/script.js"></script>
 </body>
 </html>

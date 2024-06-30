@@ -1,3 +1,42 @@
+/*Iniciar sesión*/
+var alreadyLoggedIn = JSON.parse(localStorage.getItem('alreadyLoggedIn')) || false;
+function login(){
+    var user = document.getElementById('loginUser');
+    var password = document.getElementById('loginPassword');
+    var login = document.getElementById('menuLogin');
+    var profile = document.getElementById('menuUser');
+    if(alreadyLoggedIn == false){
+        var valueUser = user.value;
+        var valuePassword = password.value;
+        if(valueUser == "admin" && valuePassword == "admin"){
+            login.style.display = 'none';
+            profile.style.display = 'flex';
+            alreadyLoggedIn = true;
+            localStorage.setItem('alreadyLoggedIn', JSON.stringify(alreadyLoggedIn));
+            window.location.href = '../HTML/home.html';
+        }
+        user.value = '';
+        password.value = '';
+    }
+}
+document.addEventListener('DOMContentLoaded', function() {
+    if (alreadyLoggedIn) {
+        var login = document.getElementById('menuLogin');
+        var profile = document.getElementById('menuUser');
+        login.style.display = 'none';
+        profile.style.display = 'flex';
+    }
+});
+
+/*Cerrar sesión*/
+function singOut(){
+    alreadyLoggedIn = false;
+    localStorage.setItem('alreadyLoggedIn', JSON.stringify(alreadyLoggedIn));
+    var login = document.getElementById('menuLogin');
+    var profile = document.getElementById('menuUser');
+    login.style.display = 'flex';
+    profile.style.display = 'none';
+}
 
 /*Cambiar icono preguntas frecuentes*/
 //Creamos variables para almacenar el estado del icono de cada tarjeta
@@ -110,4 +149,82 @@ function cardSelectSave(numberCard){
                 console.log('5'+iconPreguntaAdd5)
             break;
     }
+}
+
+/*Muestra el nombre del archivo seleccionado en registrarse*/
+document.getElementById('fileInput').addEventListener('change', function() {
+    var fileName = this.files[0].name;
+    document.getElementById('fileName').textContent = fileName;
+});
+
+/*Editar datos usuario*/
+function editDataUser(){
+    var datosUser = document.querySelectorAll('.datoUser');
+    var datoUserInput = document.querySelectorAll('.datoUserInput');
+    var nameUser = document.getElementById('datoUserName').textContent;
+    var lastnameUser = document.getElementById('datoUserLastname').textContent;
+    var emailUser = document.getElementById('datoUserEmail').textContent;
+    var passwordUser = document.getElementById('datoUserPassword').textContent;
+    var buttonsEdit = document.querySelectorAll('.buttonEdit');
+    datosUser.forEach((data) => {
+        data.style.display = 'none';
+    });
+    datoUserInput.forEach((data,index) => {
+        data.style.display = 'block';
+        if(index == 0){
+            data.value = nameUser;
+        }
+        if(index == 1){
+            data.value = lastnameUser;
+        }
+        if(index == 2){
+            data.value = emailUser;
+        }
+        if(index == 3){
+            data.value = passwordUser;
+        }
+    });
+    buttonsEdit.forEach((data) => {
+        data.style.display = 'block';
+    });
+}
+function saveDataUser(){
+    var datosUser = document.querySelectorAll('.datoUser');
+    var datoUserInput = document.querySelectorAll('.datoUserInput');
+    var buttonsEdit = document.querySelectorAll('.buttonEdit');
+    datosUser.forEach((data) => {
+        data.style.display = 'block';
+    });
+    datoUserInput.forEach((input, index) => {
+        input.style.display = 'none';
+        if (index == 0) {
+            document.getElementById('datoUserName').textContent = input.value;
+        }
+        if (index == 1) {
+            document.getElementById('datoUserLastname').textContent = input.value;
+        }
+        if (index == 2) {
+            document.getElementById('datoUserEmail').textContent = input.value;
+        }
+        if (index == 3) {
+            document.getElementById('datoUserPassword').textContent = input.value;
+        }
+    });
+    buttonsEdit.forEach((data) => {
+        data.style.display = 'none';
+    });
+}
+function cancelDataUser(){
+    var datosUser = document.querySelectorAll('.datoUser');
+    var datoUserInput = document.querySelectorAll('.datoUserInput');
+    var buttonsEdit = document.querySelectorAll('.buttonEdit');
+    datosUser.forEach((data) => {
+        data.style.display = 'block';
+    });
+    datoUserInput.forEach((data) => {
+        data.style.display = 'none';
+    });
+    buttonsEdit.forEach((data) => {
+        data.style.display = 'none';
+    });
 }

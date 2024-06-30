@@ -4,7 +4,15 @@
     font-weight: bolder;
     border-bottom: 2px var(--color-letter-hover) dashed;
 }
-
+#menuUser li:nth-child(2) a{
+    color: var(--color-letter);
+    font-weight: normal;
+    border-bottom: none;
+}
+#menuUser li:nth-child(2) a:hover{
+    color: white;
+    transition: color .3s ;
+}
 /*Search*/
 #contentSearch{
     width: 100%;
@@ -88,6 +96,7 @@
 }
 .itemGeneros:hover{
     text-decoration: underline;
+    color: var(--color-letter-hover);
 }
 /*-Games*/
 #contentGames{
@@ -113,6 +122,10 @@
     background-color: var(--color-primary);
     font-size: 1.2rem;
     position: relative;
+}
+.card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .card img{
     height: 100%;

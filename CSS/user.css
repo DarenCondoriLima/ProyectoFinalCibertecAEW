@@ -1,0 +1,96 @@
+/*Header*/
+#menuUser li:nth-child(1) a{
+    color: white;
+    font-weight: bolder;
+    border-bottom: 2px white dashed;
+}
+#menuUser li:nth-child(1){
+    background-color: var(--color-letter-hover);
+}
+
+/*Datos*/
+#contentDatos{
+    width: 100%;
+    height: 80vh;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contentDatosAling{
+    width: 95%;
+    height: 85%;
+    display: flex;
+}
+#contentDatosAling img{
+    width: 40%;
+    height: 100%;
+}
+#contentDatosUser{
+    width: 58%;
+    margin-left: 2%;
+}
+#contentName{
+    width: 100%;
+    height: 20%;
+    display: flex;
+}
+#contentName div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+#contentName span:nth-child(1){
+    font-size: 2rem;
+    font-weight: bolder;
+}
+#contentName span:nth-child(2){
+    font-size: 1.5rem;
+}
+
+.datosItem{
+    width: 100%;
+    height: 18%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.datosItem span:nth-child(1){
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.datosItem span:nth-child(2){
+    font-size: 1.5rem;
+}
+#contentButtonAling{
+    width: 95%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+}
+#contentButtonAling input{
+    width: 10%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--color-secondary);
+}
+#contentButtonAling input:hover{
+    background-color: var(--color-extra);
+}
+.datoUserInput{
+    height: 50%;
+    background: transparent;
+    display: none;
+}
+.buttonEdit{
+    display: none;
+}
+#contentButtonAling input:nth-child(3){
+    background-color: rgb(194, 63, 63);
+}
+#contentButtonAling input:nth-child(3):hover{
+    background-color: rgb(190, 99, 99);
+}

@@ -1,10 +1,28 @@
 :root{
-    --color-letter: #0D1F23;
-    --color-letter-hover: #6db2c4;
-    --color-primary: #2D4A53;
-    --color-secondary: #69818D;
-    --color-extra: #AFB3B7;
-    --color-background: #5A636A;
+    --color-letter: #010010;
+    --color-letter-hover: #237ebb;
+    --color-primary: #033556;
+    --color-secondary: #11537f;
+    --color-extra: #0199e2;
+    --color-background: #2e4557;
+    /* Tonos oscuros:
+    #080618
+    #010010
+    #2e4557
+    #2f3d59
+    #27364c
+    #11537f
+    #09491d
+    #033556
+    #0199e2
+    Tonos claros:
+    #a5ebfa
+    #34bee6
+    #e78e4d
+    #16b9e6
+    #f74a4c
+    #fa4954
+    #f9faf4 */
 }
 *{
     margin: 0;
@@ -23,21 +41,26 @@ header{
     height: 10vh;
     background-color: var(--color-secondary);
     display: flex;
-    align-items: center;
-    position: sticky;
+    color: var(--color-letter);
+    z-index: 10;
+    position: fixed;
 }
 #logo{
-    width: 12%;
+    width: 20%;
     height: 100%;
     margin-left: 10px;
 }
+#logo img{
+    width: 40%;
+    height: 100%;
+}
 #menu{
-    width: 60%;
-    position: relative;
+    width: 78%;
+    display: flex;
     margin: 0;
-    left: 0;
 }
 #menu ul{
+    width: 100%;
     list-style: none;
     display: flex;
     align-items: center;
@@ -53,13 +76,7 @@ header{
     color: var(--color-letter-hover);
     transition: color .3s;
 }
-/* #menu li:nth-last-child(1) a:hover{
-    padding-left: -15px;
-    color: var(--color-letter);
-    background-color: var(--color-extra);
-    transition: all .2s;
-} */
- #menu li:nth-child(5):hover{
+#menu li:nth-child(5):hover{
     transform: translateY(-10px);
     transition: all .2s;
 }
@@ -71,18 +88,95 @@ header{
     top: 0;
     margin-left: 15px;
 }
+#subMenu li{
+    width: 100%;
+    display: none;
+}
 #subMenu li a{
     margin-left: 0px;
 }
 #menu li:hover #subMenu {
+    display: block;
     top: 100%;
+    left: 0px;
     visibility: visible;
     opacity: 1;
+}
+#menu li:hover #subMenu li{
+   display: block;
+}
+#menu li:hover #subMenu {
+    display: block;
+    top: 100%;
+    left: 0px;
+    visibility: visible;
+    opacity: 1;
+}
+
+#menuUser{
+    width: 9%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+#menuUser img{
+    width: 80%;
+    margin-top: 5px;
+    border: 2px black solid; 
+    border-radius: 50px;
+}
+#menuUser ul{
+    width: 140%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    background-color: var(--color-extra);
+    margin-right: 20px;
+    transition: all .3s;
+    visibility: hidden;
+    opacity: 0;
+}
+#menuUser:hover ul{
+    visibility: visible;
+    opacity: 1;
+}
+#menuUser ul li{
+    width: 100%;
+    text-align: center;
+}
+#menuUser ul li:nth-last-child(1){
+    text-decoration: none;
+    color: var(--color-letter);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+#menuUser ul li:hover{
+    background: var(--color-letter-hover);
+    transition: color .3s;
+}
+#menuUser ul li:hover a{
+    color: white;
+    transition: color .3s;
+}
+#menuUser ul li:nth-last-child(1):hover{
+    color: white;
+    transition: color .3s;
 }
 /*Main*/
 main{
     width: 100%;
     overflow-x: hidden;
+}
+audio{
+    display: none;
+}
+.header{
+    height: 10vh;
+    width: 100%;
 }
 /*Footer*/
 footer{

@@ -162,3 +162,6 @@ main h3{
     border-radius: 8px;
     background: var(--color-secondary);
 }
+#formButton input:hover{
+    background: var(--color-extra);
+}

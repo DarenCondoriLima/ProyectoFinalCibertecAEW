@@ -1,0 +1,165 @@
+/*Header*/
+#menuUser li:nth-child(2) a{
+    color: white;
+    font-weight: bolder;
+    border-bottom: 2px white dashed;
+}
+#menuUser li:nth-child(2){
+    background-color: var(--color-letter-hover);
+}
+
+/*Lista de deseos*/
+#contentWishList{
+    width: 100%;
+    height: 80vh;
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-letter);
+}
+#contentWishListAling{
+    width: 95%;
+    height: 95%;
+}
+#contentFilter{
+    width: 30%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    border-right: 3px black solid;
+}
+
+#contentFilterSearch{
+    position: relative;
+    width: 90%;
+    height: 10%;
+}
+#contentFilterSearch input{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    padding-left: 40px;
+    border-radius: 15px;
+}
+#contentFilterSearch svg{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 30px;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none; /*Esto evita que la imagen interfiera con el funcionamiento del input*/
+}
+
+#contentElementsOrder{
+    width: 90%;
+}
+#contentFilterTitle{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+#contentElementsFilterOrder{
+    width: 100%;
+    
+}
+#contentElementsFilterOrder div{
+    width: 60%;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+#contentElementsFilterOrder span{
+    font-size: 1.2rem;
+}
+#contentElementsFilterOrder input{
+    margin-left: 10px;
+}
+#contentFilterGenres{
+    display: flex;
+}
+#contentElementsFilterGenres{
+    display: flex;
+    flex-direction: column;
+}
+#contentElementsFilterGenres a{
+    width: 60%;
+    text-decoration: none;
+    color: var(--color-letter);
+}
+#contentElementsFilterGenres a:hover{
+    text-decoration: underline;
+    color: var(--color-letter-hover);
+}
+#contentElementsFilterGenresNumber{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#contentGames{
+    width: 70%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card{
+    width: 95%;
+    height: 16%;
+    margin-top: 10px;
+    border: 3px black solid;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-letter);
+    background-color: var(--color-primary);
+    font-size: 1.2rem;
+    position: relative;
+}
+.card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.card img{
+    height: 100%;
+}
+.card p{
+    padding-left: 50px;
+}
+.card span{
+    position: absolute;
+    right: 30px;
+}
+
+#numberPage{
+    display: flex;
+    margin-top: 15px;
+}
+#numberPage ul{
+    list-style: none;
+    display: flex;
+}
+#numberPage ul a{
+    text-decoration: none;
+    color: var(--color-letter);
+    margin-left: 5px;
+}
+#numberPage ul a:hover{
+    text-decoration: underline;
+}
+#numberPage svg{
+    width: 20px;
+}
+#arrow-right{
+    margin-left: 5px;  
+}
+#arrow-left{
+    transform: rotate(180deg);
+}

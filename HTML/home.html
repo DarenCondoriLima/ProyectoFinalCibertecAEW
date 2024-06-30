@@ -11,8 +11,8 @@
 </head>
 <body>
     <header>          
-            <a href="#">
-                <img src="../images/logo.png" id="logo">
+            <a href="#" id="logo">
+                <img src="../images/logo.png">
             </a>
             <nav id="menu">
                 <ul>
@@ -20,16 +20,27 @@
                     <li><a href="../HTML/games.html">Juegos</a></li>
                     <li><a href="../HTML/acercaDe.html">Acerca de</a></li>
                     <li><a href="../HTML/support.html">Soporte</a></li>
-                    <li><a href="../HTML/login.html">Iniciar sesión</a>
-                    <ul id="subMenu">
-                        <li>
-                            <a href="../HTML/register.html">Registraté</a>
-                        </li>
-                    </ul></li>
+                    <li id="menuLogin"><a href="../HTML/login.html">Iniciar sesión</a>
+                        <ul id="subMenu">
+                            <li>
+                                <a href="../HTML/register.html">Registraté</a>
+                            </li>
+                        </ul></li>
+                    <li id="menuUser"><a href="../HTML/user.html"><img src="../images/user.png"></a>
+                        <ul>
+                            <li><a href="../HTML/user.html">Mi perfil</a></li>
+                            <li><a href="../HTML/wishList.html">Lista de deseos</a></li>
+                            <li onclick="singOut()">Cerrar sesión</li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
     </header>
     <main>
+        <section class="header"></section>
+        <audio autoplay loop>
+            <source src="../sound/music-background.mp3" type="audio/mp3">
+        </audio>
         <section id="contentSlider">
             <img src="../images/logo.png" alt="">
         </section>
@@ -37,88 +48,112 @@
             <h1>Juegos Populares</h1>
             <section id="cards">
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
-                    <img src="../images/logo.png" alt="">
-                    <div>
-                        <h2>Titulo juego</h2>
-                        <p>precio</p>
-                    </div>
+                    <a href="../HTML/game.html">
+                        <img src="../images/logo.png" alt="">
+                        <div>
+                            <h2>Titulo juego</h2>
+                            <p>precio</p>
+                        </div>
+                    </a>
                 </div>
             </section>
         </section>
@@ -141,5 +176,6 @@
             <p>Sebastián Martín Talavera Fernandez</p>
         </div>
     </footer>
+    <script src="../JS/script.js"></script>
 </body>
 </html>
