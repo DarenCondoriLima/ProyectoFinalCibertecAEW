@@ -38,6 +38,49 @@ function singOut(){
     profile.style.display = 'none';
 }
 
+/*Carrusel Home*/
+document.addEventListener('DOMContentLoaded', function() {
+    var carouselImages = document.querySelector('.carousel-images');
+    var images = document.querySelectorAll('.carousel-images a');
+    var prevButton = document.querySelector('.prev');
+    var nextButton = document.querySelector('.next');
+    var currentIndex = 0;
+    var interval;
+
+    function showImage(index) {
+        var offset = -index * 100;
+        carouselImages.style.transform = `translateX(${offset}%)`;
+    }
+
+    function startCarousel() {
+        interval = setInterval(function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }, 3000); // Cambia cada 3 segundos
+    }
+
+    function stopCarousel() {
+        clearInterval(interval);
+    }
+
+    prevButton.addEventListener('click', function() {
+        stopCarousel();
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+        startCarousel();
+    });
+
+    nextButton.addEventListener('click', function() {
+        stopCarousel();
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+        startCarousel();
+    });
+
+    startCarousel();
+
+});
+
 /*Cambiar icono preguntas frecuentes*/
 //Creamos variables para almacenar el estado del icono de cada tarjeta
 var iconPreguntaAdd1 = true; 
