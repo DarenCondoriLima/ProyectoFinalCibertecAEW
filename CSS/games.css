@@ -44,7 +44,6 @@
     z-index: 1;
     pointer-events: none; /*Esto evita que la imagen interfiera con el funcionamiento del input*/
 }
-
 /*Principal*/
 #contentPrincipal{
     width: 100%;
@@ -53,7 +52,7 @@
     color: var(--color-letter);
     display: flex;
 }
-/*-Filter*/
+    /*Filter*/
 #contentFilter{
     width: 20%;
     height: 95%;
@@ -61,6 +60,7 @@
     flex-direction: column;
     align-items: center;
     border-right: 2px black solid;
+    color: var(--color-letter-extra);
 }
 #titleFilter{
     font-size: 1.3rem;
@@ -92,13 +92,13 @@
 .itemGeneros{
     padding-left: 30px;
     text-decoration: none;
-    color: var(--color-letter);
+    color: var(--color-letter-extra);
 }
 .itemGeneros:hover{
     text-decoration: underline;
     color: var(--color-letter-hover);
 }
-/*-Games*/
+    /*Games*/
 #contentGames{
     width: 80%;
     display: flex;
@@ -153,7 +153,7 @@
 }
 #numberPage ul a{
     text-decoration: none;
-    color: var(--color-letter);
+    color: var(--color-letter-extra);
     margin-left: 5px;
 }
 #numberPage ul a:hover{

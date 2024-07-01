@@ -1,28 +1,11 @@
 :root{
-    --color-letter: #010010;
-    --color-letter-hover: #237ebb;
-    --color-primary: #033556;
-    --color-secondary: #11537f;
-    --color-extra: #0199e2;
-    --color-background: #2e4557;
-    /* Tonos oscuros:
-    #080618
-    #010010
-    #2e4557
-    #2f3d59
-    #27364c
-    #11537f
-    #09491d
-    #033556
-    #0199e2
-    Tonos claros:
-    #a5ebfa
-    #34bee6
-    #e78e4d
-    #16b9e6
-    #f74a4c
-    #fa4954
-    #f9faf4 */
+    --color-letter: #FFF;
+    --color-letter-extra: #080618;
+    --color-letter-hover: #E63946;
+    --color-primary: #457B9D;
+    --color-secondary: #033556;
+    --color-extra: #A8DADC;
+    --color-background: #F1FAEE;
 }
 *{
     margin: 0;
@@ -31,6 +14,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+/*Body*/
 body{
     width: 100%;
     overflow-x: hidden;
@@ -80,6 +64,7 @@ header{
     transform: translateY(-10px);
     transition: all .2s;
 }
+    /*Registrarse*/
 #subMenu{
     position: absolute;
     visibility: hidden;
@@ -112,7 +97,7 @@ header{
     visibility: visible;
     opacity: 1;
 }
-
+    /*Menu del usuario*/
 #menuUser{
     width: 9%;
     height: 100%;
@@ -159,11 +144,11 @@ header{
     transition: color .3s;
 }
 #menuUser ul li:hover a{
-    color: white;
+    color: var(--color-letter);
     transition: color .3s;
 }
 #menuUser ul li:nth-last-child(1):hover{
-    color: white;
+    color: var(--color-letter);
     transition: color .3s;
 }
 /*Main*/
@@ -197,6 +182,10 @@ footer{
 #redesFooter svg{
     width: 50px;
     height: 50px;
+}
+#redesFooter svg:hover{
+    width: 60px;
+    height: 60px;
 }
 #textFooter{
     height: 100%;

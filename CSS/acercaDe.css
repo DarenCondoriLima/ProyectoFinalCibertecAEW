@@ -12,7 +12,11 @@ main{
 main h2{
     font-size: 1.7rem;
 }
-
+hr{
+    border: 1px black solid;
+    width: 95%;
+    margin: 0 auto;
+}
 /*Quienes Somos*/
 #contentQuienesSomos{
     width: 100%;
@@ -112,8 +116,6 @@ main h2{
 .contentCard div:nth-child(even) p,span{
     text-align: left;
 }
-
-
 /*Porque escogernos*/
 #contentPorqueEscogernos{
     width: 100%;

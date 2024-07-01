@@ -1,24 +1,30 @@
 /*Iniciar sesión*/
+//Guardamos el dato en el localStorage del usuario
 var alreadyLoggedIn = JSON.parse(localStorage.getItem('alreadyLoggedIn')) || false;
 function login(){
+    //Seleccionamos los datos del inico de sesión
     var user = document.getElementById('loginUser');
     var password = document.getElementById('loginPassword');
+    //Seleccionamos los dos cotenedores de la barra de menú
     var login = document.getElementById('menuLogin');
     var profile = document.getElementById('menuUser');
+    //Si el usuario no se ha logueado antes.
     if(alreadyLoggedIn == false){
         var valueUser = user.value;
         var valuePassword = password.value;
+        //Se verifica los datos de logueo.
         if(valueUser == "admin" && valuePassword == "admin"){
             login.style.display = 'none';
             profile.style.display = 'flex';
             alreadyLoggedIn = true;
+            //Guardamos en el localStorange que el usiario si se logueo
             localStorage.setItem('alreadyLoggedIn', JSON.stringify(alreadyLoggedIn));
+            //Redireccionamos a la página principal
             window.location.href = '../HTML/home.html';
         }
-        user.value = '';
-        password.value = '';
     }
 }
+//Si el usuario ya se logueo, se muestra en el menu, el contenedor del usuario
 document.addEventListener('DOMContentLoaded', function() {
     if (alreadyLoggedIn) {
         var login = document.getElementById('menuLogin');
@@ -40,43 +46,49 @@ function singOut(){
 
 /*Carrusel Home*/
 document.addEventListener('DOMContentLoaded', function() {
+    //Se selecciona las imagenes
     var carouselImages = document.querySelector('.carousel-images');
     var images = document.querySelectorAll('.carousel-images a');
+    //Se selecciona las flechas
     var prevButton = document.querySelector('.prev');
     var nextButton = document.querySelector('.next');
-    var currentIndex = 0;
+    //Variables extra
+    var currentIndex = 0;/*Guarda la posición de la imagen mostrada*/
     var interval;
 
     function showImage(index) {
-        var offset = -index * 100;
+        var offset = -index * 100; 
+        //Desplaza la imagen horizontalamente
         carouselImages.style.transform = `translateX(${offset}%)`;
     }
 
     function startCarousel() {
         interval = setInterval(function() {
-            currentIndex = (currentIndex + 1) % images.length;
+            currentIndex = (currentIndex + 1) % images.length;//actualiza la posición de la imagen
             showImage(currentIndex);
         }, 3000); // Cambia cada 3 segundos
     }
 
     function stopCarousel() {
-        clearInterval(interval);
+        clearInterval(interval);//Limpia el intervalo, esto para que se rinicie el contador
     }
 
     prevButton.addEventListener('click', function() {
-        stopCarousel();
+        stopCarousel();//Reinicia el contador
+        //Optiene la posición de la imagen anterior
         currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-        startCarousel();
+        showImage(currentIndex);//Cambia a la imagen anterior
+        startCarousel();//Inicia el carrusel
     });
 
     nextButton.addEventListener('click', function() {
-        stopCarousel();
+        stopCarousel();//Reinicia el contador
+        //Optiene la posición de la imagen siguiente
         currentIndex = (currentIndex + 1) % images.length;
         showImage(currentIndex);
-        startCarousel();
+        startCarousel();//Inicia el carrusel
     });
-
+    //Inicia el carrusel
     startCarousel();
 
 });
@@ -107,7 +119,7 @@ function changeIcon(numberCard){
             <rect x="20" y="45" width="60" height="10" rx="5" ry="5" fill="black" />
         `; 
         iconPreguntaAdd = true;
-        var text = cardSelect(numberCard);
+        var text = cardSelect(numberCard);//Selecciona la tarjeta
         text.style.display = 'none';
     }else{
         newSvg.innerHTML = `
@@ -115,7 +127,7 @@ function changeIcon(numberCard){
             <rect x="20" y="45" width="60" height="10" rx="5" ry="5" fill="black" />
         `;
         iconPreguntaAdd = false;
-        var text = cardSelect(numberCard);
+        var text = cardSelect(numberCard);//Selecciona la tarjeta
         text.style.display = 'block';
     }
     //Asignamos el nuevo valor de estado del icono a las variables de almacenamiento
@@ -123,7 +135,7 @@ function changeIcon(numberCard){
     //Añadimos el svg
     iconDiv.appendChild(newSvg);
 }
-
+//Guarda el valor del icono de cada tarjeta
 function cardSelectState(numberCard){
     switch(numberCard){
         case 1:
@@ -153,7 +165,7 @@ function cardSelectState(numberCard){
             break; 
     }
 }
-
+//Selecciona la tarjeta clickeada
 function cardSelect(numberCard){
     switch(numberCard){
         case 1:
@@ -168,28 +180,23 @@ function cardSelect(numberCard){
             return document.getElementById('textCard5');
     }
 }
-
+//Guarda el nuevo valor de tarjeta
 function cardSelectSave(numberCard){
     switch(numberCard){
         case 1:
                 iconPreguntaAdd1 = iconPreguntaAdd;
-                console.log('1'+iconPreguntaAdd1)
             break;
         case 2:
                 iconPreguntaAdd2 = iconPreguntaAdd;
-                console.log('2'+iconPreguntaAdd2)
             break;
         case 3:
                 iconPreguntaAdd3 = iconPreguntaAdd;
-                console.log('3'+iconPreguntaAdd3)
             break;
         case 4:
                 iconPreguntaAdd4 = iconPreguntaAdd;
-                console.log('4'+iconPreguntaAdd4)
             break;
         case 5:
                 iconPreguntaAdd5 = iconPreguntaAdd;
-                console.log('5'+iconPreguntaAdd5)
             break;
     }
 }
@@ -202,16 +209,22 @@ document.getElementById('fileInput').addEventListener('change', function() {
 
 /*Editar datos usuario*/
 function editDataUser(){
+    //Selecciona todos los contenedores de datos usuario
     var datosUser = document.querySelectorAll('.datoUser');
+    //Obtiene los inputs de edición
     var datoUserInput = document.querySelectorAll('.datoUserInput');
+    //Obtiene los datos del usuario
     var nameUser = document.getElementById('datoUserName').textContent;
     var lastnameUser = document.getElementById('datoUserLastname').textContent;
     var emailUser = document.getElementById('datoUserEmail').textContent;
     var passwordUser = document.getElementById('datoUserPassword').textContent;
+    //Selecciona los botones de usuario
     var buttonsEdit = document.querySelectorAll('.buttonEdit');
+    //Oculta los datos del usuario
     datosUser.forEach((data) => {
         data.style.display = 'none';
     });
+    //Muestra los inputs de edición
     datoUserInput.forEach((data,index) => {
         data.style.display = 'block';
         if(index == 0){
@@ -227,19 +240,27 @@ function editDataUser(){
             data.value = passwordUser;
         }
     });
+    //Muestra los botones de edición
     buttonsEdit.forEach((data) => {
         data.style.display = 'block';
     });
 }
+//Guardamos los datos editados
 function saveDataUser(){
+    //Selecciona todos los contenedores de datos usuario
     var datosUser = document.querySelectorAll('.datoUser');
+    //Obtiene los inputs de edición
     var datoUserInput = document.querySelectorAll('.datoUserInput');
+    //Selecciona los botones de usuario
     var buttonsEdit = document.querySelectorAll('.buttonEdit');
+    //Mostramos los datos del usuario
     datosUser.forEach((data) => {
         data.style.display = 'block';
     });
     datoUserInput.forEach((input, index) => {
+        //Ocultamos los inputs de edición
         input.style.display = 'none';
+        //Reemplazamos los datos del usuario, por los editados
         if (index == 0) {
             document.getElementById('datoUserName').textContent = input.value;
         }
@@ -253,20 +274,27 @@ function saveDataUser(){
             document.getElementById('datoUserPassword').textContent = input.value;
         }
     });
+    //Ocultamos los botones de edición
     buttonsEdit.forEach((data) => {
         data.style.display = 'none';
     });
 }
 function cancelDataUser(){
+    //Selecciona todos los contenedores de datos usuario
     var datosUser = document.querySelectorAll('.datoUser');
+    //Obtiene los inputs de edición
     var datoUserInput = document.querySelectorAll('.datoUserInput');
+    //Selecciona los botones de edición
     var buttonsEdit = document.querySelectorAll('.buttonEdit');
+    //Mostramos los datos del usuario
     datosUser.forEach((data) => {
         data.style.display = 'block';
     });
+    //Ocultamos los inputs de edición
     datoUserInput.forEach((data) => {
         data.style.display = 'none';
     });
+    //Ocultamos los botones de edición
     buttonsEdit.forEach((data) => {
         data.style.display = 'none';
     });
