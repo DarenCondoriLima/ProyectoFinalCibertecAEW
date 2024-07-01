@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>outlats</title>
+    <link rel="shortcut icon" href="../../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="../../CSS/game.css">
+</head>
+<body>
+    <header>          
+        <a id="logo" href="../../HTML/home.html">
+            <img src="../../images/logo.png">
+        </a>
+        <nav id="menu">
+            <ul>
+                <li><a href="../../HTML/home.html">Inicio</a></li>
+                <li><a href="../../HTML/games.html">Juegos</a></li>
+                <li><a href="../../HTML/acercaDe.html">Acerca de</a></li>
+                <li><a href="../../HTML/support.html">Soporte</a></li>
+                <li id="menuLogin"><a href="../../HTML/login.html">Iniciar sesión</a>
+                <ul id="subMenu">
+                    <li>
+                        <a href="../../HTML/register.html">Registraté</a>
+                    </li>
+                </ul></li>
+                <li id="menuUser"><a href="../../HTML/user.html"><img src="../../images/user.png"></a>
+                    <ul>
+                        <li><a href="../../HTML/user.html">Mi perfil</a></li>
+                        <li><a href="../../HTML/wishList.html">Lista de deseos</a></li>
+                        <li onclick="singOut()">Cerrar sesión</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="header"></section>
+        <section id="contentGame">
+            <div id="imgGame">
+                <video autoplay controls>
+                    <source src="../outlast/media/outlatsTrailer.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="contentTextGame">
+                <h2>Outlast</h2>
+                <p>Hell is an experiment you can't survive in Outlast, a first-person survival horror game developed by veterans of some of the biggest game franchises in history. As investigative journalist Miles Upshur, explore Mount Massive Asylum and try to survive long enough to discover its terrible secret... if you...</p>
+                <p><strong>DESARROLLADOR:</strong></p>
+                <p>Red Barrels</p>
+                <p><strong>EDITOR:</strong></p>
+                <p>Red Barrels</p>
+            </div>
+        </section>
+        <section id="contentcards">
+            <div id="contentPrincipalCards">
+                <div id="principalCardsTitle">
+                    <span>Tienda</span>
+                    <span>Precio</span>
+                </div>
+                <div id="principalCards">
+                    <a href="https://store.steampowered.com/app/238320/Outlast/" class="card">                       
+                        <img src="../../images/steam.svg">
+                        <span id="nameStore">Steam</span>
+                        <span id="priceGame">S/.6.45</span>
+                    </a>
+                    <a href="https://store.epicgames.com/es-ES/p/outlast" class="card">
+                        <img src="../../images/epicGames.svg">
+                        <span id="nameStore">EpicGames</span>
+                        <span id="priceGame">S/.38.99</span>
+                    </a>
+                    <a href="https://www.xbox.com/es-MX/games/store/outlast/bp3gh4d3hp2h" class="card">
+                        <img src="../../images/xbox.svg">
+                        <span id="nameStore">Xbox</span>
+                        <span id="priceGame">S/.60.33</span>
+                    </a>
+                    <a href="https://www.playstation.com/es-ar/games/outlast/" class="card">
+                        <img src="../../images/playstation.svg">
+                        <span id="nameStore">Play Station</span>
+                        <span id="priceGame">S/.76.40</span>
+                    </a>
+                    <a href="https://www.nintendo.com/us/store/products/outlast-bundle-of-terror-switch/" class="card">
+                        <img src="../../images/nintendo.svg">
+                        <span id="nameStore">Nintendo Switch</span>
+                        <span id="priceGame">S/.95.50</span>
+                    </a>
+                </div>
+            </div>
+            <aside id="contentSideCards">
+                <span id="titleSideCards">Juegos Similares</span>
+                <div id="sideCards">
+                    <a href="../../HTML/game.html" class="sideCard">
+                        <img src="../../images/iconsGames/finalFantasyVII.png">
+                        <h2>FINAL FANTASY VII</h2>
+                    </a>
+                    <a href="../../HTML/game.html" class="sideCard">
+                        <img src="../../images/iconsGames/subnautica.png">
+                        <h2>Subnautica</h2>
+                    </a>
+                    <a href="../../HTML/game.html" class="sideCard">
+                        <img src="../../images/iconsGames/f124.png">
+                        <h2>F1® 24</h2>
+                    </a>
+                    <a href="../../HTML/game.html" class="sideCard">
+                        <img src="../../images/iconsGames/mortalkombat1.png">
+                        <h2>Mortal Kombat 1</h2>
+                    </a>
+                    <a href="../../HTML/game.html" class="sideCard">
+                        <img src="../../images/iconsGames/deadSpace.webp">
+                        <h2>Dead Space</h2>
+                    </a>
+                    <a href="../../HTML/game.html" class="sideCard">
+                        <img src="../../images/iconsGames/cyberpunk2077.png">
+                        <h2>Cyberpunk 2077</h2>
+                    </a>
+                </div>
+            </aside>
+        </section>
+        <section id="contentRequisitos">
+            <div id="textRequisitos">
+                <span id="textRequisitosTitle">Requisitos del juego</span>
+                <div id="requisitos">
+                    <div class="requisitos">
+                        <span>MÍNIMO:</span>
+                        <span><strong>SO:</strong> Windows XP / Vista / 7 / 8 - 64 bits *</span>
+                        <span><strong>Procesador:</strong> 2.2 GHz Dual Core CPU</span>
+                        <span><strong>Gráficos:</strong> 512 MB NVIDIA GeForce 9800GTX / ATI Radeon HD 3xxx series</span>
+                        <span><strong>Memoria:</strong> 2 GB de RAM</span>
+                    </div>
+                    <div class="requisitos">
+                        <span>RECOMENDADO:</span>
+                        <span><strong>SO:</strong> Windows Vista / 7 / 8 - 64 bits</span>
+                        <span><strong>Procesador:</strong> 2.8 GHz Quad Core CPU</span>
+                        <span><strong>Gráficos:</strong> 1GB NVIDIA GTX 460 / ATI Radeon HD 6850 or better</span>
+                        <span><strong>Memoria:</strong> 3 GB de RAM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="redesFooter">  
+            <a href="#">
+                <svg viewBox="0 0 50 50"><path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"/></svg>
+            </a>
+            <a href="#">
+                <svg viewBox="0 0 50 50"><path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"/></svg>
+            </a>
+            <a href="#">
+                <svg viewBox="0 0 50 50"><path d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"/></svg>
+            </a>
+        </div>
+        <div id="textFooter">
+            <p>&#169;2024 BetterPriceGames | Todos los derechos reservados</p>
+            <p>Web realizada por Daren Paulo Jose Condori Lima y</p>
+            <p>Sebastián Martín Talavera Fernandez</p>
+        </div>
+    </footer>
+    <script src="../../JS/script.js"></script>
+</body>
+</html>

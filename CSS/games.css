@@ -127,8 +127,13 @@
     transform: translateY(-2px);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
+.card:hover span,.card:hover p{
+    color: var(--color-letter-hover);
+}
 .card img{
     height: 100%;
+    width: 20%;
+    margin-left: 5px;
 }
 .card p{
     padding-left: 50px;

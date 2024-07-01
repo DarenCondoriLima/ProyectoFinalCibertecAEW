@@ -22,7 +22,7 @@
                 <li id="menuLogin"><a href="../HTML/login.html">Iniciar sesión</a>
                 <ul id="subMenu">
                     <li>
-                        <a href="..//HTML/register.html">Registraté</a>
+                        <a href="../HTML/register.html">Registraté</a>
                     </li>
                 </ul></li>
                 <li id="menuUser"><a href="../HTML/user.html"><img src="../images/user.png"></a>
@@ -37,14 +37,19 @@
     </header>
     <main>
         <section class="header"></section>
-        <audio autoplay loop>
-            <source src="../sound/music-background.mp3" type="audio/mp3">
-        </audio>
         <section id="contentGame">
-            <img src="../images/logo.png">
+            <div id="imgGame">
+                <video autoplay controls>
+                    <source src="../games/outlast/media/outlatsTrailer.mp4" type="video/mp4">
+                </video>
+            </div>
             <div id="contentTextGame">
-                <h2>Titulo del juego</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit neque voluptatum vitae! In natus autem cumque vel saepe id cum accusantium ullam. Ad incidunt labore perspiciatis natus eum accusamus porro et odio earum exercitationem ex, praesentium, dolorum veniam atque eaque necessitatibus nobis dicta doloremque itaque tempore? Sequi suscipit sunt accusantium.</p>
+                <h2>Nombre del juego</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit a magni adipisci cumque, nihil quam natus eveniet dolorem labore qui!</p>
+                <p><strong>DESARROLLADOR:</strong></p>
+                <p>Desarrollador del juego</p>
+                <p><strong>EDITOR:</strong></p>
+                <p>Editor del juego</p>
             </div>
         </section>
         <section id="contentcards">
@@ -54,67 +59,84 @@
                     <span>Precio</span>
                 </div>
                 <div id="principalCards">
-                    <div class="card">
-                        <img src="../images/logo.png">
-                        <span id="nameStore">Nombre de la tienda</span>
-                        <span id="priceGame">19.99</span>
-                    </div>
-                    <div class="card">
-                        <img src="../images/logo.png">
-                        <span id="nameStore">Nombre de la tienda</span>
-                        <span id="priceGame">19.99</span>
-                    </div>
-                    <div class="card">
-                        <img src="../images/logo.png">
-                        <span id="nameStore">Nombre de la tienda</span>
-                        <span id="priceGame">19.99</span>
-                    </div>
-                    <div class="card">
-                        <img src="../images/logo.png">
-                        <span id="nameStore">Nombre de la tienda</span>
-                        <span id="priceGame">19.99</span>
-                    </div>
-                    <div class="card">
-                        <img src="../images/logo.png">
-                        <span id="nameStore">Nombre de la tienda</span>
-                        <span id="priceGame">19.99</span>
-                    </div>
+                    <a href="#" class="card">                       
+                        <img src="../../images/steam.svg">
+                        <span id="nameStore">Steam</span>
+                        <span id="priceGame">S/.60.00</span>
+                    </a>
+                    <a href="#" class="card">
+                        <img src="../../images/epicGames.svg">
+                        <span id="nameStore">EpicGames</span>
+                        <span id="priceGame">S/.78.99</span>
+                    </a>
+                    <a href="#" class="card">
+                        <img src="../../images/xbox.svg">
+                        <span id="nameStore">Xbox</span>
+                        <span id="priceGame">S/.80.33</span>
+                    </a>
+                    <a href="#" class="card">
+                        <img src="../../images/playstation.svg">
+                        <span id="nameStore">Play Station</span>
+                        <span id="priceGame">S/.93.40</span>
+                    </a>
+                    <a href="#" class="card">
+                        <img src="../../images/nintendo.svg">
+                        <span id="nameStore">Nintendo Switch</span>
+                        <span id="priceGame">S/.95.50</span>
+                    </a>
                 </div>
             </div>
             <aside id="contentSideCards">
                 <span id="titleSideCards">Juegos Similares</span>
                 <div id="sideCards">
-                    <div class="sideCard">
-                        <img src="../images/logo.png">
-                        <h2>Nombre del juego</h2>
-                    </div>
-                    <div class="sideCard">
-                        <img src="../images/logo.png">
-                        <h2>Nombre del juego</h2>
-                    </div>
-                    <div class="sideCard">
-                        <img src="../images/logo.png">
-                        <h2>Nombre del juego</h2>
-                    </div>
-                    <div class="sideCard">
-                        <img src="../images/logo.png">
-                        <h2>Nombre del juego</h2>
-                    </div>
-                    <div class="sideCard">
-                        <img src="../images/logo.png">
-                        <h2>Nombre del juego</h2>
-                    </div>
-                    <div class="sideCard">
-                        <img src="../images/logo.png">
-                        <h2>Nombre del juego</h2>
-                    </div>
+                    <a href="../HTML/game.html" class="sideCard">
+                        <img src="../images/iconsGames/finalFantasyVII.png">
+                        <h2>FINAL FANTASY VII</h2>
+                    </a>
+                    <a href="../HTML/game.html" class="sideCard">
+                        <img src="../images/iconsGames/subnautica.png">
+                        <h2>Subnautica</h2>
+                    </a>
+                    <a href="../HTML/game.html" class="sideCard">
+                        <img src="../images/iconsGames/f124.png">
+                        <h2>F1® 24</h2>
+                    </a>
+                    <a href="../HTML/game.html" class="sideCard">
+                        <img src="../images/iconsGames/mortalkombat1.png">
+                        <h2>Mortal Kombat 1</h2>
+                    </a>
+                    <a href="../HTML/game.html" class="sideCard">
+                        <img src="../images/iconsGames/deadSpace.webp">
+                        <h2>Dead Space</h2>
+                    </a>
+                    <a href="../HTML/game.html" class="sideCard">
+                        <img src="../images/iconsGames/cyberpunk2077.png">
+                        <h2>Cyberpunk 2077</h2>
+                    </a>
                 </div>
             </aside>
         </section>
         <section id="contentRequisitos">
             <div id="textRequisitos">
-                <span>Requisitos del juego</span>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio ratione officia omnis odit dicta sapiente architecto rerum similique illum iste necessitatibus distinctio impedit nam quas reiciendis, beatae iure numquam modi iusto, hic sit porro. Exercitationem optio iste, laboriosam, minima sint recusandae quas animi molestias sed est temporibus sunt itaque inventore consectetur aliquam numquam doloribus officia saepe sapiente a eligendi eos ad? Iure obcaecati eligendi eveniet eos culpa mollitia dicta magnam!</p>
+                <span id="textRequisitosTitle">Requisitos del juego</span>
+                <div id="requisitos">
+                    <div class="requisitos">
+                        <span>MÍNIMO:</span>
+                        <span>Requiere un procesador y un sistema operativo de 64 bits</span>
+                        <span><strong>SO:</strong> TBD</span>
+                        <span><strong>Procesador:</strong> TBD</span>
+                        <span><strong>Gráficos:</strong> TBD</span>
+                        <span><strong>Tarjeta de sonido:</strong> TBD</span>
+                    </div>
+                    <div class="requisitos">
+                        <span>RECOMENDADO:</span>
+                        <span>Requiere un procesador y un sistema operativo de 64 bits</span>
+                        <span><strong>SO:</strong> TBD</span>
+                        <span><strong>Procesador:</strong> TBD</span>
+                        <span><strong>Gráficos:</strong> TBD</span>
+                        <span><strong>Tarjeta de sonido:</strong> TBD</span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
